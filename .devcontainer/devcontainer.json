@@ -3,13 +3,23 @@
 {
   "name": "Node.js & TypeScript",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-16",
   "features": {
     "ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
   },
   "customizations": {
     "vscode": {
-      "extensions": ["loiane.angular-extension-pack"]
+      "extensions": [
+        "Angular.ng-template",
+        "steoates.autoimport",
+        "formulahendry.auto-close-tag",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "rctay.karma-problem-matcher",
+        "dbaeumer.vscode-eslint",
+        "christian-kohler.path-intellisense",
+        "SimonTest.simontest"
+      ]
     }
   },
 
@@ -17,10 +27,10 @@
   // "features": {},
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [4200]
+  "forwardPorts": [4200],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "yarn install",
+  "postCreateCommand": "npm install"
 
   // Configure tool-specific properties.
   // "customizations": {},
