@@ -9,7 +9,17 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["loiane.angular-extension-pack"]
+      "extensions": [
+        "Angular.ng-template",
+        "steoates.autoimport",
+        "formulahendry.auto-close-tag",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "rctay.karma-problem-matcher",
+        "dbaeumer.vscode-eslint",
+        "christian-kohler.path-intellisense",
+        "SimonTest.simontest"
+      ]
     }
   },
 
