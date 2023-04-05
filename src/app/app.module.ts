@@ -1,4 +1,3 @@
-import { ProductsModule } from './products/products.module';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './home/welcome.component';
 import { NgModule } from '@angular/core';
@@ -7,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { ElementsModule } from './element/element.module';
 
 @NgModule({
   declarations: [AppComponent, WelcomeComponent],
@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
     ]),
-    ProductsModule,
+    ElementsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
