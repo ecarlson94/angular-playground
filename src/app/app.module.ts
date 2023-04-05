@@ -7,9 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ElementsModule } from './element/element.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent],
+  declarations: [AppComponent, WelcomeComponent, NavbarComponent],
   imports: [
     BrowserModule,
     FormsModule,
