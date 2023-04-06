@@ -1,13 +1,15 @@
 import { RouterModule } from '@angular/router';
-import { WelcomeComponent } from './home/welcome.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './scaffold/home/welcome.component';
+import { NavbarComponent } from './scaffold/navbar/navbar.component';
 import { ElementsModule } from './element/element.module';
-import { NavbarComponent } from './navbar/navbar.component';
+import { MenubarModule } from 'primeng/menubar';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [AppComponent, WelcomeComponent, NavbarComponent],
@@ -20,7 +22,9 @@ import { NavbarComponent } from './navbar/navbar.component';
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
     ]),
-    ElementsModule
+    ElementsModule,
+    MenubarModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -5,7 +5,7 @@ import { ProductService } from '../product.service';
 
 @Component({
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.sass'],
+  styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
   pageTitle = 'Product Details';

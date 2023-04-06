@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-stars-rating',
   templateUrl: './stars-rating.component.html',
-  styleUrls: ['./stars-rating.component.sass'],
+  styleUrls: ['./stars-rating.component.scss'],
 })
 export class StarsRatingComponent implements OnChanges {
   @Input() rating: number = 0;

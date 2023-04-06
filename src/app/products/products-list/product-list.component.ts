@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.sass'],
+  styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit, OnDestroy {
   constructor(private productService: ProductService) {}

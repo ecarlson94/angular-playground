@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-element-component',
   templateUrl: './element.component.html',
-  styleUrls: ['./element.component.sass'],
+  styleUrls: ['./element.component.scss'],
 })
 export class ElementComponent {
   get element() {
