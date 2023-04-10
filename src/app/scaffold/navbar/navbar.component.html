@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
   <a href="#">ATLA</a>
   <ul>
     <li><a routerLink="/welcome">Home</a></li>
@@ -7,4 +7,15 @@
     <li><a routerLink="/elements/water">Water</a></li>
     <li><a routerLink="/elements/air">Air</a></li>
   </ul>
-</nav>
+</nav> -->
+
+
+
+<p-menubar [model]="menuItems">
+  <ng-template pTemplate="start">
+    <img class="logo" src="/assets/images/atla_elements" routerLink="/welcome"/>
+  </ng-template>
+
+  <ng-template pTemplate="end">
+  </ng-template>
+</p-menubar>
