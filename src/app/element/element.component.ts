@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { ElementInfoService } from './element-info.service';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ElementInfo } from './element-info';
 
 @Component({
   selector: 'app-element-component',
@@ -7,9 +9,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./element.component.scss'],
 })
 export class ElementComponent {
+  elementInfo: ElementInfo | undefined;
+
   get element() {
     return this.route.snapshot.paramMap.get('element');
   }
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private elementInfoService: ElementInfoService
+  ) {
+    route.params.subscribe((val) => {
+      this.elementInfoService
+        .getElementInfo(this.element ?? 'air')
+        .subscribe({ next: (elementInfo) => (this.elementInfo = elementInfo) });
+    });
+  }
 }

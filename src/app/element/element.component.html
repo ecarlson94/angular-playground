@@ -1,1 +1,11 @@
-<p>{{ element | titlecase }} works!</p>
+<div>
+  <p-card header="{{ element | uppercase }}">
+
+    <p>{{ element | titlecase }} works!</p>
+    <p> {{ elementInfo?.summary}}</p>
+    <p> {{ elementInfo?.notableBenders}}</p>
+    <p> {{ elementInfo?.previousAvatars}}</p>
+    <p> {{ elementInfo?.regions}}</p>
+    <p> {{ elementInfo?.specialties}}</p>
+  </p-card>
+</div>
