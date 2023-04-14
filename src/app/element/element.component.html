@@ -1,42 +1,42 @@
-<div class="containers">
-  <h1>{{ element | uppercase }}</h1>
+<div style="background-image: url('{{ element }}');">
+  <div class="containers">
+    <p-card class="containers">{{ element | uppercase }}</p-card>
 
-  <p-card>
-    <!-- <p>{{ element | titlecase }} works!</p> -->
-    <p ng-bind="textFromJSON" style="white-space: pre-wrap">
-      {{ elementInfo?.summary }}
-    </p>
-    <!-- <p>{{ elementInfo?.notableBenders | slice : 0 : 3 }}</p>
+    <p-card header="Summary">
+      <!-- <p>{{ element | titlecase }} works!</p> -->
+      <p ng-bind="textFromJSON" style="white-space: pre-wrap">
+        {{ elementInfo?.summary }}
+      </p>
+      <!-- <p>{{ elementInfo?.notableBenders | slice : 0 : 3 }}</p>
     <p>{{ elementInfo?.previousAvatars }}</p>
     <p>{{ elementInfo?.regions }}</p>
     <p>{{ elementInfo?.specialties }}</p> -->
-  </p-card>
-</div>
+    </p-card>
+  </div>
 
-<div class="containers subcontainers">
-  <h1>Notable Benders</h1>
-  <p-card>
-    <li *ngFor="let i of elementInfo?.notableBenders">{{ i }}</li>
-  </p-card>
-</div>
+  <p-divider></p-divider>
 
-<div class="containers subcontainers">
-  <h1>Previous Avatars</h1>
-  <p-card>
-    <li *ngFor="let i of elementInfo?.previousAvatars">{{ i }}</li>
-  </p-card>
-</div>
+  <div class="containers subcontainers">
+    <p-card header="Notable Benders">
+      <li *ngFor="let i of elementInfo?.notableBenders">{{ i }}</li>
+    </p-card>
+  </div>
 
-<div class="containers subcontainers">
-  <h1>Regions for {{ element }}</h1>
-  <p-card>
-    <li *ngFor="let i of elementInfo?.regions">{{ i }}</li>
-  </p-card>
-</div>
+  <div class="containers subcontainers">
+    <p-card header="Previous Avatars">
+      <li *ngFor="let i of elementInfo?.previousAvatars">{{ i }}</li>
+    </p-card>
+  </div>
 
-<div class="containers subcontainers">
-  <h1>Specialties</h1>
-  <p-card>
-    <li *ngFor="let i of elementInfo?.specialties">{{ i }}</li>
-  </p-card>
+  <div class="containers subcontainers">
+    <p-card header="Regions for {{ element }}">
+      <li *ngFor="let i of elementInfo?.regions">{{ i }}</li>
+    </p-card>
+  </div>
+
+  <div class="containers subcontainers">
+    <p-card header="Specialties">
+      <li *ngFor="let i of elementInfo?.specialties">{{ i }}</li>
+    </p-card>
+  </div>
 </div>

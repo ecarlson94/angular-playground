@@ -15,6 +15,10 @@ export class ElementComponent {
     return this.route.snapshot.paramMap.get('element');
   }
 
+  get backgroundImage() {
+    return '';
+  }
+
   constructor(
     private route: ActivatedRoute,
     private elementInfoService: ElementInfoService

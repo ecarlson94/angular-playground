@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
   declarations: [StarsRatingComponent, ConvertToSpacesPipe],
@@ -14,6 +15,7 @@ import { CardModule } from 'primeng/card';
     StarsRatingComponent,
     ConvertToSpacesPipe,
     CardModule,
+    DividerModule,
   ],
 })
 export class SharedModule {}
