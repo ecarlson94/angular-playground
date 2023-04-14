@@ -12,11 +12,7 @@ export class ElementComponent {
   elementInfo: ElementInfo | undefined;
 
   get element() {
-    return this.route.snapshot.paramMap.get('element');
-  }
-
-  get backgroundImage() {
-    return '';
+    return this.route.snapshot.paramMap.get('element') ?? 'air';
   }
 
   constructor(
@@ -25,7 +21,7 @@ export class ElementComponent {
   ) {
     route.params.subscribe((val) => {
       this.elementInfoService
-        .getElementInfo(this.element ?? 'air')
+        .getElementInfo(this.element)
         .subscribe({ next: (elementInfo) => (this.elementInfo = elementInfo) });
     });
   }

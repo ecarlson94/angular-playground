@@ -22,6 +22,7 @@ export class ElementInfoService {
           'Suffocation',
           'Hypersensitivity to Air',
         ],
+        image: '/assets/images/AirKingdom.jpg',
       },
     ],
     [
@@ -41,6 +42,7 @@ export class ElementInfoService {
           'Water Gliding',
           'Steam Manipulation',
         ],
+        image: '/assets/images/waterKingdom.jpg',
       },
     ],
     [
@@ -66,6 +68,7 @@ export class ElementInfoService {
           'Fire Breathing',
           'Combustionbending',
         ],
+        image: '/assets/images/FireKingdom.jpg',
       },
     ],
     [
@@ -99,6 +102,7 @@ export class ElementInfoService {
           'Glassbending',
           'Seismic Sense',
         ],
+        image: '/assets/images/EarthKingdom.jpg',
       },
     ],
   ]);

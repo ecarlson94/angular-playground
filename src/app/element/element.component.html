@@ -1,42 +1,53 @@
-<div style="background-image: url('{{ element }}');">
+<div
+  class="background"
+  style="background-image: url('{{ elementInfo?.image }}');"
+>
   <div class="containers">
-    <p-card class="containers">{{ element | uppercase }}</p-card>
+    <div class="frosty-card containers" style="font-size: 20px">
+      {{ element | uppercase }}
+    </div>
 
-    <p-card header="Summary">
-      <!-- <p>{{ element | titlecase }} works!</p> -->
+    <div class="frosty-card">
+      <div class="frosty-card-title">Summary</div>
       <p ng-bind="textFromJSON" style="white-space: pre-wrap">
         {{ elementInfo?.summary }}
       </p>
-      <!-- <p>{{ elementInfo?.notableBenders | slice : 0 : 3 }}</p>
-    <p>{{ elementInfo?.previousAvatars }}</p>
-    <p>{{ elementInfo?.regions }}</p>
-    <p>{{ elementInfo?.specialties }}</p> -->
-    </p-card>
-  </div>
-
-  <p-divider></p-divider>
-
-  <div class="containers subcontainers">
-    <p-card header="Notable Benders">
-      <li *ngFor="let i of elementInfo?.notableBenders">{{ i }}</li>
-    </p-card>
+    </div>
   </div>
 
   <div class="containers subcontainers">
-    <p-card header="Previous Avatars">
-      <li *ngFor="let i of elementInfo?.previousAvatars">{{ i }}</li>
-    </p-card>
+    <div class="frosty-card">
+      <div class="frosty-card-title">Notable Benders</div>
+      <div>
+        <li *ngFor="let i of elementInfo?.notableBenders">{{ i }}</li>
+      </div>
+    </div>
   </div>
 
   <div class="containers subcontainers">
-    <p-card header="Regions for {{ element }}">
-      <li *ngFor="let i of elementInfo?.regions">{{ i }}</li>
-    </p-card>
+    <div class="frosty-card">
+      <div class="frosty-card-title">Previous Avatars</div>
+      <div>
+        <li *ngFor="let i of elementInfo?.previousAvatars">{{ i }}</li>
+      </div>
+    </div>
   </div>
 
   <div class="containers subcontainers">
-    <p-card header="Specialties">
-      <li *ngFor="let i of elementInfo?.specialties">{{ i }}</li>
-    </p-card>
+    <div class="frosty-card">
+      <div class="frosty-card-title">Regions for {{ element | titlecase }}</div>
+      <div>
+        <li *ngFor="let i of elementInfo?.regions">{{ i }}</li>
+      </div>
+    </div>
+  </div>
+
+  <div class="containers subcontainers">
+    <div class="frosty-card">
+      <div class="frosty-card-title">Specialties</div>
+      <div>
+        <li *ngFor="let i of elementInfo?.specialties">{{ i }}</li>
+      </div>
+    </div>
   </div>
 </div>
