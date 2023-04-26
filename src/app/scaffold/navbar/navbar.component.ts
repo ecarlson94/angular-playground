@@ -30,5 +30,9 @@ export class NavbarComponent {
       label: 'Fire',
       routerLink: '/elements/fire',
     },
+    {
+      label: 'Quiz',
+      routerLink: '/quiz',
+    },
   ];
 }

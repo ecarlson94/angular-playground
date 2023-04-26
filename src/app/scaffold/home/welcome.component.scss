@@ -1,0 +1,85 @@
+.map{
+  background-image: url("/assets/images/atla_map3.jpg");
+  position:fixed;
+  top:0px;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.frosty-card {
+  background-color: rgba(255, 255, 255, .25);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 5px;
+  color: black;
+}
+
+.containers{
+  align-self: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.button {
+  border: none;
+  color: whitesmoke;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  background-color: rgba(255, 255, 255, .25);
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.earth{
+  position: relative;
+  top: 225px;
+  left: 1100px;
+  color: darkgreen;
+}
+.earth:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+.fire{
+  position: relative;
+  top: 300px;
+  left: 300px;
+  color: darkred;
+}
+.fire:hover {
+  background-color: #7e0101;
+  color: white;
+}
+
+.air{
+  position: relative;
+  top: 150px;
+  left: 250px;
+  color: lightblue;
+}
+.air:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+.water{
+  position: relative;
+  top: 550px;
+  left: 375px;
+  color: darkblue;
+}
+.water:hover {
+  background-color: darkblue;
+  color: white;
+}
+

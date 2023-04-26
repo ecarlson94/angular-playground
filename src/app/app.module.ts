@@ -10,21 +10,30 @@ import { NavbarComponent } from './scaffold/navbar/navbar.component';
 import { ElementsModule } from './element/element.module';
 import { MenubarModule } from 'primeng/menubar';
 import { CardModule } from 'primeng/card';
+import { QuizComponent } from './quiz/quiz.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    WelcomeComponent,
+    NavbarComponent,
+    QuizComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
+      { path: 'quiz', component: QuizComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
     ]),
     ElementsModule,
     MenubarModule,
     CardModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

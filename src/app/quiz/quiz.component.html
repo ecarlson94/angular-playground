@@ -1,0 +1,20 @@
+<p>quiz works!</p>
+
+<form class="flex flex-column gap-3" [formGroup]="formGroup">
+  <div *ngFor="let question of quizQuestions" class="field-checkbox">
+    <p class="question">{{ question.value }}</p>
+    <div *ngFor="let answer of question.answers" class="">
+      <p-radioButton
+        [inputId]="question.id + answer.element"
+        [value]="answer"
+        [formControlName]="question.id"
+      ></p-radioButton>
+      <label [for]="question.id + answer.element" class="ml-2">{{
+        answer.value
+      }}</label>
+    </div>
+  </div>
+  <p-button label="Submit" class="button" (onClick)="submit()"></p-button>
+</form>
+
+<p *ngIf="quizResult">{{ quizResult | titlecase }}</p>
