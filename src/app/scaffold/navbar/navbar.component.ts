@@ -9,11 +9,6 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   menuItems = [
-    // {
-    //   label: 'Home',
-    //   routerLink: "/welcome",
-    //   icon: "/assets/images/atla_elementsLogo.png"
-    // },
     {
       label: 'Air',
       routerLink: '/elements/air',
