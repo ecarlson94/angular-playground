@@ -7,9 +7,14 @@ import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ButtonModule } from 'primeng/button';
+import { IndefiniteArticleSelectorPipe } from './indefinite-article-selector.pipe';
 
 @NgModule({
-  declarations: [StarsRatingComponent, ConvertToSpacesPipe],
+  declarations: [
+    StarsRatingComponent,
+    ConvertToSpacesPipe,
+    IndefiniteArticleSelectorPipe,
+  ],
   imports: [CommonModule],
   exports: [
     CommonModule,
@@ -21,6 +26,7 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     RadioButtonModule,
     ButtonModule,
+    IndefiniteArticleSelectorPipe,
   ],
 })
 export class SharedModule {}

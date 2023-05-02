@@ -28,6 +28,8 @@
   grid-auto-flow: column;
   margin-top: 20px;
   margin-bottom: 20px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
 }
 
 hr.rounded {

@@ -14,14 +14,25 @@
           [value]="answer"
           [formControlName]="question.id"
         ></p-radioButton>
-        <label [for]="question.id + answer.element" class="ml-2">{{
-          answer.value
-        }}</label>
+        <label [for]="question.id + answer.element" class="ml-2"
+          >&nbsp; {{ answer.value }}</label
+        >
       </div>
     </div>
   </form>
   <div class="form">
     <p-button label="Submit" class="button" (onClick)="submit()"></p-button>
   </div>
-  <p *ngIf="quizResult">{{ quizResult | titlecase }}</p>
+  <div class="frosty-card" *ngIf="quizResult">
+    <p class="frosty-card-questions" style="text-align: center">
+      <b
+        >You are {{ quizResult | indefiniteArticleSelector }}
+        {{ quizResult | titlecase }}bender!</b
+      ><br />Check out the
+      <a [routerLink]="'/elements/' + quizResult">{{
+        quizResult | titlecase
+      }}</a>
+      page for more details about your bending style!
+    </p>
+  </div>
 </div>
