@@ -3,12 +3,8 @@
   style="background-image: url('{{ elementInfo?.image }}');"
 >
   <div class="containers">
-    <div class="frosty-card containers" style="font-size: 20px">
-      {{ element | uppercase }}
-    </div>
-
     <div class="frosty-card">
-      <div class="frosty-card-title">Summary</div>
+      <div class="frosty-card-title">{{ element | titlecase }}</div>
       <p ng-bind="textFromJSON" style="white-space: pre-wrap">
         {{ elementInfo?.summary }}
       </p>

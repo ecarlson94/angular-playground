@@ -40,9 +40,9 @@
 }
 
 .earth{
-  position: relative;
-  top: 250px;
-  left: 1100px;
+  position: absolute;
+  top: 38%;
+  left: 58%;
   color: darkgreen;
 }
 .earth:hover {
@@ -51,9 +51,9 @@
 }
 
 .fire{
-  position: relative;
-  top: 330px;
-  left: 300px;
+  position: absolute;
+  top: 45%;
+  left: 25%;
   color: darkred;
 }
 .fire:hover {
@@ -62,20 +62,21 @@
 }
 
 .air{
-  position: relative;
-  top: 170px;
-  left: 220px;
+  position: absolute;
+  top: 32%;
+  left: 28%;
   color: lightblue;
 }
+
 .air:hover {
   background-color: lightblue;
   color: white;
 }
 
 .water{
-  position: relative;
-  top: 560px;
-  left: 375px;
+  position: absolute;
+  top: 78%;
+  left: 45%;
   color: darkblue;
 }
 .water:hover {

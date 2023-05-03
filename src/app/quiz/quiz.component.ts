@@ -2,6 +2,7 @@ import { QuizAnswer, QuizQuestion } from './quiz-question';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { QuizService } from './quiz.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -13,7 +14,7 @@ export class QuizComponent {
   quizQuestions: QuizQuestion[];
   quizResult: string | null = null;
 
-  constructor(private quizService: QuizService) {
+  constructor(private quizService: QuizService, private router: Router) {
     this.formGroup = new FormGroup({});
     this.quizQuestions = quizService.quizQuestions;
     for (var question of this.quizQuestions) {
@@ -40,5 +41,9 @@ export class QuizComponent {
       );
       this.quizResult = this.quizService.calculateElement(answers);
     }
+  }
+
+  navigateToResults() {
+    this.router.navigate([`/elements/${this.quizResult}`]);
   }
 }

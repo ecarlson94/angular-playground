@@ -24,12 +24,15 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      { path: 'quiz', component: QuizComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
-    ]),
+    RouterModule.forRoot(
+      [
+        { path: 'welcome', component: WelcomeComponent },
+        { path: 'quiz', component: QuizComponent },
+        { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+        { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
+      ],
+      { scrollPositionRestoration: 'enabled' }
+    ),
     ElementsModule,
     MenubarModule,
     CardModule,

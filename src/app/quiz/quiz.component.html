@@ -23,16 +23,13 @@
   <div class="form">
     <p-button label="Submit" class="button" (onClick)="submit()"></p-button>
   </div>
-  <div class="frosty-card" *ngIf="quizResult">
-    <p class="frosty-card-questions" style="text-align: center">
+  <div class="frosty-card center" *ngIf="quizResult">
+    <p class="frosty-card-questions">
       <b
         >You are {{ quizResult | indefiniteArticleSelector }}
         {{ quizResult | titlecase }}bender!</b
-      ><br />Check out the
-      <a [routerLink]="'/elements/' + quizResult">{{
-        quizResult | titlecase
-      }}</a>
-      page for more details about your bending style!
+      >
     </p>
+    <p-button (click)="navigateToResults()" label="Find out more!"></p-button>
   </div>
 </div>
